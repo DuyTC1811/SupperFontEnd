@@ -11,6 +11,9 @@ import { LoginComponent } from './login/login.component';
 import { httpInterceptorProviders } from './_helpers/http.interceptor';
 import { ProfileComponent } from './profile/profile.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
+import {AppRoutingModule} from "./app-routing.module";
+import { BoardAdminComponent } from './board-admin/board-admin.component';
+import { BoardUserComponent } from './board-user/board-user.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +22,15 @@ import { BoardModeratorComponent } from './board-moderator/board-moderator.compo
     RegisterComponent,
     LoginComponent,
     ProfileComponent,
-    BoardModeratorComponent
+    BoardModeratorComponent,
+    BoardAdminComponent,
+    BoardUserComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    AppRoutingModule
   ],
   providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]

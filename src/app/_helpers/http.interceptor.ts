@@ -11,7 +11,9 @@ import { EventData } from "../_shared/event.class";
 export class HttpRequestInterceptor implements HttpInterceptor {
     private isRefreshing = false;
 
-    constructor(private storageService: StorageService, private eventBusService: EventBusService) {
+    constructor(
+        private storageService: StorageService,
+        private eventBusService: EventBusService) {
     }
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
