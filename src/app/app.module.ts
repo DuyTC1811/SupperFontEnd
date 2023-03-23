@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 
 import { httpInterceptorProviders } from './_helpers/http.interceptor';
 import { ProfileComponent } from './profile/profile.component';
+import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ProfileComponent } from './profile/profile.component';
     HomeComponent,
     RegisterComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    BoardModeratorComponent
   ],
   imports: [
     BrowserModule,
