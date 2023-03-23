@@ -8,19 +8,23 @@ import { FormsModule } from "@angular/forms";
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 
+import { httpInterceptorProviders } from './_helpers/http.interceptor';
+import { ProfileComponent } from './profile/profile.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
