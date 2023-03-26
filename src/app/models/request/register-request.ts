@@ -1,12 +1,8 @@
 export interface RegisterRequest {
-    name: string;
-    cccd: string;
+    username: string;
+    password: string;
     email: string;
     mobile: string;
-    username: string;
-    lastName: string;
-    password: string;
     rolesId: [];
-    fistName: string;
     permissionId: string;
 }

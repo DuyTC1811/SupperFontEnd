@@ -1,17 +1,12 @@
 <div class="col-md-12">
     <div class="card card-container">
-        <img
-                id="profile-img"
-                src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-                class="profile-img-card"
-        />
         <form
                 *ngIf="!isLoggedIn"
                 name="form"
                 (ngSubmit)="f.form.valid && onSubmit()"
                 #f="ngForm"
-                novalidate
-        >
+                novalidate>
+
             <div class="form-group">
                 <label for="username">Username</label>
                 <input
@@ -22,7 +17,7 @@
                         required
                         #username="ngModel"
                         [ngClass]="{ 'is-invalid': f.submitted && username.errors }"
-                />
+                        id="username"/>
                 <div *ngIf="username.errors && f.submitted" class="invalid-feedback">
                     Username is required!
                 </div>
@@ -38,7 +33,7 @@
                         minlength="6"
                         #password="ngModel"
                         [ngClass]="{ 'is-invalid': f.submitted && password.errors }"
-                />
+                        id="password"/>
                 <div *ngIf="password.errors && f.submitted" class="invalid-feedback">
                     <div *ngIf="password.errors['required']">Password is required</div>
                     <div *ngIf="password.errors['minlength']">

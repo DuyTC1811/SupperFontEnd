@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { UserService } from "../_services/user.service";
 
 @Component({
@@ -6,7 +6,7 @@ import { UserService } from "../_services/user.service";
   templateUrl: './board-admin.component.html',
   styleUrls: ['./board-admin.component.css']
 })
-export class BoardAdminComponent {
+export class BoardAdminComponent implements OnInit {
   content?: string;
 
   constructor(private userService: UserService) { }

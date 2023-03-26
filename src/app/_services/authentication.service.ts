@@ -21,8 +21,8 @@ export class AuthenticationService {
     return this.http.post<LoginRequest>(AUTHENTICATION_API + 'sign-in', requestBody, httpOptions);
   }
 
-  register(username: string, email: string, password: string): Observable<RegisterRequest> {
-    const requestBody = {username: username, password: password, email: email};
+  register(username: string, email: string, password: string, mobile: string, rolesId: [], permissionId: string): Observable<RegisterRequest> {
+    const requestBody = {username: username, password: password, email: email, mobile: mobile, rolesId, permissionId};
     return this.http.post<RegisterRequest>(AUTHENTICATION_API + 'sing-up', requestBody, httpOptions);
   }
 
