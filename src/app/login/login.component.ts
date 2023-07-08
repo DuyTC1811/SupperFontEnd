@@ -2,11 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import {LoginRequest} from "../models/request/login-request";
 import { StorageService } from "../_services/storage.service";
 import { AuthenticationService } from "../_services/authentication.service";
+import { FormsModule } from '@angular/forms';
+import { NgIf, NgClass } from '@angular/common';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.css'],
+    standalone: true,
+    imports: [NgIf, FormsModule, NgClass]
 })
 export class LoginComponent implements OnInit {
   form: any = {

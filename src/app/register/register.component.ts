@@ -1,11 +1,15 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthenticationService} from "../_services/authentication.service";
 import {RegisterRequest} from "../models/request/register-request";
+import { FormsModule } from '@angular/forms';
+import { NgIf, NgClass } from '@angular/common';
 
 @Component({
     selector: 'app-register',
     templateUrl: './register.component.html',
-    styleUrls: ['./register.component.css']
+    styleUrls: ['./register.component.css'],
+    standalone: true,
+    imports: [NgIf, FormsModule, NgClass]
 })
 export class RegisterComponent implements OnInit {
     listRole = [

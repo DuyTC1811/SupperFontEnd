@@ -3,11 +3,15 @@ import { StorageService } from "./_services/storage.service";
 import { AuthenticationService } from "./_services/authentication.service";
 import { EventBusService } from "./_shared/event-bus.service";
 import { Subscription } from "rxjs";
+import { NgIf } from '@angular/common';
+import { RouterLinkActive, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
+    standalone: true,
+    imports: [RouterLinkActive, RouterLink, NgIf, RouterOutlet]
 })
 export class AppComponent {
   private roles: string[] = [];
